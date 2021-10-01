@@ -15,4 +15,5 @@ chmod +x /usr/local/bin/shutdown
 
 sed -i "/#PermitRootLogin/c\PermitRootLogin yes" /etc/ssh/sshd_config
 mkdir ~/.ssh
+wget https://raw.githubusercontent.com/jetbrains-infra/packer-builder-vsphere/master/test/test-key.pub -O ~/.ssh/authorized_keys
 /etc/init.d/sshd restart
